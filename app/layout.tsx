@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./Components/Header";
-
+ 
+import ReduxProvider from "./redux/provider/ReduxProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Movie App",
-  description: "Latest bollywood movie and songs",
+  description: "Latest bollywood movies and songs",
 };
 
 export default function RootLayout({
@@ -18,9 +19,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
-        {children}
-        </body>
+      <ReduxProvider>
+          <Header />
+          {children}
+        </ReduxProvider>
+      </body>
     </html>
   );
 }
+
