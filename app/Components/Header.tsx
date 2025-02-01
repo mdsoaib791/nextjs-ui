@@ -19,7 +19,7 @@ const Header: React.FC = () => {
 
 
   return (
-    <div className="bg-blue-600 text-lime-50 relative">
+    <div className="bg-blue-700 text-lime-50 relative">
       <div className="container py-5 flex items-center justify-between gap-1">
         <div className="logo_area">
           <a href="/" title="Home">
